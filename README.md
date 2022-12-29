@@ -1,9 +1,9 @@
 ## ITMO_University
 ### There are some educational materials that also include my homework for coding related subjects
-#### If you are looking for my code examples you may proceed by the links below:
+#### If you are looking for my code examples you may follow the links below:
 1. Java console apps:
-   - Console Interface
-   - Conosle Inreface with the implementation of client-server architecture
+   - Console Interface (part 1)
+   - Console Inreface (part 2 that implements the client-server architecture)
 2. Web apps:
-   - ...
-   - ... 
+   - Website (part 1 which is developed with using JSF, Servlets and Beans)
+   - Website (part 2 where data preservation is implemented)
