@@ -1,5 +1,0 @@
-help
-show
-info
-execute_script ./src/main/resources/script1.txt
-history
