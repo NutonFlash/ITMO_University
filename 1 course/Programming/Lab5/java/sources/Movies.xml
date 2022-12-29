@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MovieArray>
+    <movie>
+        <name>Убить Билла</name>
+        <x>213.0</x>
+        <y>3</y>
+        <oscarsCount>21</oscarsCount>
+        <goldenPalmCount>3</goldenPalmCount>
+        <usaBoxOffice>123.23</usaBoxOffice>
+        <mpaaRating>R</mpaaRating>
+        <person>
+            <personName>Борис</personName>
+            <weight>77.0</weight>
+            <country>CANADA</country>
+            <location>
+                <xLocation>-2121.0</xLocation>
+                <yLocation>12.0</yLocation>
+                <zLocation>231321</zLocation>
+                <nameLocation>Купчино</nameLocation>
+            </location>
+        </person>
+    </movie>
+    <movie>
+        <name>ИТМО - институт теплых мужских отношений</name>
+        <x>12.0</x>
+        <y>21</y>
+        <oscarsCount>32</oscarsCount>
+        <goldenPalmCount>3</goldenPalmCount>
+        <usaBoxOffice>2123.1</usaBoxOffice>
+        <mpaaRating>R</mpaaRating>
+        <person>
+            <personName>Саня</personName>
+            <weight>213.21</weight>
+            <country>CANADA</country>
+        </person>
+    </movie>
+    <movie>
+        <name>box</name>
+        <x>21.0</x>
+        <y>21</y>
+        <oscarsCount>2</oscarsCount>
+        <goldenPalmCount>12</goldenPalmCount>
+        <usaBoxOffice>23132.0</usaBoxOffice>
+        <mpaaRating>R</mpaaRating>
+    </movie>
+    <movie>
+        <name>Stiven King</name>
+        <x>21.0</x>
+        <y>21</y>
+        <oscarsCount>21</oscarsCount>
+        <goldenPalmCount>12</goldenPalmCount>
+        <usaBoxOffice>23132.0</usaBoxOffice>
+        <mpaaRating>R</mpaaRating>
+    </movie>
+    <movie>
+        <name>Миссия невыполнима</name>
+        <x>-212.2</x>
+        <y>12</y>
+        <oscarsCount>1</oscarsCount>
+        <goldenPalmCount>2</goldenPalmCount>
+        <usaBoxOffice>212121.0</usaBoxOffice>
+        <mpaaRating>R</mpaaRating>
+    </movie>
+</MovieArray>

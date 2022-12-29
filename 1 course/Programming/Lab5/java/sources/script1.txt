@@ -1,0 +1,26 @@
+save
+remove_by_id 2
+remove_any_by_usa_box_office 12312
+filter_less_than_golden_palm_count -123
+add
+Веном
+23
+21
+1
+23
+12321
+PG_13
+нет
+update 4
+11 друзей Оушена
+next
+12
+next
+next
+123132
+pg
+count_greater_than_screenwriter
+Никита
+123.2
+canada
+нет
