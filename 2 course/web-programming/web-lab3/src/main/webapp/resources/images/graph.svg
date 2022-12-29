@@ -1,0 +1,64 @@
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <title>background</title>
+        <rect fill="#ffffff" id="canvas_background" height="302" width="302" y="-1" x="-1"/>
+        <g display="none" id="canvasGrid">
+            <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%" id="svg_8"/>
+        </g>
+    </g>
+    <g>
+        <title>Graph</title>
+        //ЧЕРТОЧКИ ДЛЯ ОСЕЙ
+        <line id="y_axis" y2="300" x2="150" y1="0" x1="150" stroke-width="1.5" stroke="#000" fill="black"/>
+        <line id="x_axis" y2="150" x2="300" y1="150" x1="0" stroke-width="1.5" stroke="#000" fill="black"/>
+        <line id="svg_3" y2="100" x2="154" y1="100" x1="146" stroke-width="1.5" stroke="#000" fill="black"/>
+        <line id="svg_4" y2="100" x2="154" y1="100" x1="146" stroke-width="1.5" stroke="#000" fill="black"/>
+        <line id="svg_5" y2="50" x2="154" y1="50" x1="146" stroke-width="1.5" stroke="#000" fill="black"/>
+        <line id="svg_6" y2="200" x2="154" y1="200" x1="146" fill-opacity="null" stroke-opacity="null"
+              stroke-width="1.5" stroke="#000" fill="black"/>
+        <line id="svg_7" y2="250" x2="154" y1="250" x1="146" fill-opacity="null" stroke-opacity="null"
+              stroke-width="1.5" stroke="#000" fill="black"/>
+        <line fill="black" stroke="#000" stroke-width="1.5" stroke-opacity="null" fill-opacity="0" x1="145" y1="15"
+              x2="150" y2="0" id="svg_9"/>
+        <line fill="black" stroke="#000" stroke-width="1.5" stroke-opacity="null" fill-opacity="0" x1="155" y1="15"
+              x2="150" y2="0" id="svg_10"/>
+        <line fill="black" stroke="#000" stroke-width="1.5" stroke-opacity="null" fill-opacity="0" x1="285" y1="145"
+              x2="300" y2="150" id="svg_11"/>
+        <line fill="black" stroke="#000" stroke-width="1.5" stroke-opacity="null" fill-opacity="0" x1="285" y1="155"
+              x2="300" y2="150" id="svg_12"/>
+        <line fill="black" stroke="#000000" x1="50" y1="146" x2="50" y2="154" id="svg_21"/>
+        <line fill="black" stroke="#000000" x1="100" y1="146" x2="100" y2="154" id="svg_22"/>
+        <line fill="black" stroke="#000000" x1="200" y1="146" x2="200" y2="154" id="svg_23"/>
+        <line fill="black" stroke="#000000" x1="250" y1="146" x2="250" y2="154" id="svg_24"/>
+        //ОБОЗНАЧЕНИЕ ОСЕЙ
+        <text fill="#000000" stroke="#000000" stroke-width="0" x="156.68783" y="12.70706" id="svg_15" font-size="15"
+              font-family="Helvetica, Arial, sans-serif" xml:space="preserve">Y</text>
+        <text fill="#000000" stroke="#000000" stroke-width="0" x="287.25976" y="141.36818" id="svg_16" font-size="15"
+              font-family="Helvetica, Arial, sans-serif" xml:space="preserve">X</text>
+        //МЕТКИ ДЛЯ ОСИ Y
+        <text fill="#000000" stroke="#000000" stroke-width="0" x="158" y="53" id="svg_17" font-size="12"
+              font-family="Helvetica, Arial, sans-serif" xml:space="preserve">#{pointsBean.areaManager.r}</text>
+        <text fill="#000000" stroke="#000000" stroke-width="0" x="158" y="103" id="svg_18" font-size="12"
+              font-family="Helvetica, Arial, sans-serif" xml:space="preserve">#{pointsBean.areaManager.r/2}</text>
+        <text fill="#000000" stroke="#000000" stroke-width="0" x="158" y="203" id="svg_19" font-size="12"
+              font-family="Helvetica, Arial, sans-serif" xml:space="preserve">#{-pointsBean.areaManager.r/2}</text>
+        <text fill="#000000" stroke="#000000" stroke-width="0" x="158" y="253" id="svg_20" font-size="12"
+              font-family="Helvetica, Arial, sans-serif" xml:space="preserve">#{-pointsBean.areaManager.r}</text>
+        //МЕТКИ ДЛЯ ОСИ X
+        <text fill="#000000" stroke="#000000" stroke-width="0" x="43" y="142" id="svg_25" font-size="12"
+              font-family="Helvetica, Arial, sans-serif" xml:space="preserve">#{-pointsBean.areaManager.r}</text>
+        <text fill="#000000" stroke="#000000" stroke-width="0" x="90" y="142" id="svg_26" font-size="12"
+              font-family="Helvetica, Arial, sans-serif" xml:space="preserve">#{-pointsBean.areaManager.r/2}</text>
+        <text fill="#000000" stroke="#000000" stroke-width="0" x="190" y="142" id="svg_27" font-size="12"
+              font-family="Helvetica, Arial, sans-serif" xml:space="preserve">#{pointsBean.areaManager.r/2}</text>
+        <text fill="#000000" stroke="#000000" stroke-width="0" x="245" y="142" id="svg_28" font-size="12"
+              font-family="Helvetica, Arial, sans-serif" xml:space="preserve">#{pointsBean.areaManager.r}</text>
+        //ФИГУРЫ
+        <path id="triangle" fill="#00e9ff" stroke="#000000" d="m150,50l100,100l-100,0l0,-100" opacity="0.5"
+              stroke-width="0"/>
+        <path id="quadrant" fill="#00e9ff" stroke="#000000" d="m100,150l50,0l0,50a50,50 180 0 1 -50,-50" opacity="0.5"
+              stroke-width="0"/>
+        <rect fill="#00e9ff" stroke="#000000" stroke-width="0" x="49.68254" y="100" width="99.99899" height="49.68103"
+              id="rectangle" opacity="0.5"/>
+    </g>
+</svg>

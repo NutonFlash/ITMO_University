@@ -1,0 +1,75 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+body {
+    background: linear-gradient(to bottom right, coral, darksalmon, indianred);
+    font-size: 26px;
+}
+
+table {
+    padding-top: 30px;
+}
+
+#pray-table {
+    padding-left: 520px;
+    padding-top: 30px;
+}
+
+#main-content {
+    text-align: center;
+    font-size: 23px;
+    margin-top: 60px;
+    text-shadow: 0.1px -0.5px cornsilk;
+}
+
+#pray-text {
+    background: linear-gradient(45deg, #0B2349 33%, #0D61BC 66%, #8AA9D6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0B2349;
+    display: table;
+    margin: 20px auto;
+    text-transform: uppercase;
+}
+
+#name {
+    padding-left: 100px;
+    text-shadow: 1px -0.5px cornsilk;
+}
+
+#variant {
+    padding-left: 500px;
+    text-shadow: 1px -0.5px cornsilk;
+}
+
+#clock {
+    padding: 6px 6px 6px 6px;
+    margin: 5% 500px 5% 500px;
+    border-radius: 1em;
+    border: 2px solid white;
+    font-size: 26px;
+    text-align: center
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: gold;
+}
+
+#app-page:hover {
+    border-color: gold;
+}
+
+#app-page {
+    border: 2px solid white;
+    border-radius: 1em;
+    text-align: center;
+    margin: 0 500px 15px 500px;
+    padding: 3px 0 3px 0;
+}

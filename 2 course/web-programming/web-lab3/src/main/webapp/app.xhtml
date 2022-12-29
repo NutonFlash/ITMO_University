@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:custom="http://java.sun.com/jsf/composite/tags"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+
+<h:head>
+    <title>Web lab №3</title>
+    <h:outputStylesheet library="css" name="app.css"/>
+    <h:link rel="icon" href="images/favicon.ico"/>
+    <h:link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet"/>
+</h:head>
+
+<h:body>
+    <table>
+        <tr>
+            <td>
+                <div id="area-container">
+                    <div id="area-zone">
+                        <div jsf:id="area">
+                            <custom:svg-area/>
+                        </div>
+                    </div>
+                </div>
+                <h:form id="hidden-form" style="display: none">
+                    <h:inputHidden id="hidden-x-input" value="#{pointsBean.strX}"/>
+                    <h:inputHidden id="hidden-y-input" value="#{pointsBean.strY}"/>
+                    <p:commandButton id="hidden-submit-button" style="display: none"
+                                     action="#{pointsBean.submitButton()}" type="submit"
+                                     update="result-table area">
+                    </p:commandButton>
+                </h:form>
+                <h:form id="form">
+                    <div id="x-error"></div>
+                    <div id="input-x">
+                        <p>Выберите x:</p>
+
+                        <p:commandLink type="button" id="x1" actionListener="#{pointsBean.toggle}"
+                                       name="-2">
+                            <span class="button-input">-2</span>
+                        </p:commandLink>
+
+                        <p:commandLink type="button" id="x2" actionListener="#{pointsBean.toggle}"
+                                       name="-1.5">
+                            <span class="button-input">-1.5</span>
+                        </p:commandLink>
+
+                        <p:commandLink type="button" id="x3" actionListener="#{pointsBean.toggle}"
+                                       name="-1">
+                            <span class="button-input">-1</span>
+                        </p:commandLink>
+
+                        <p:commandLink type="button" id="x4" actionListener="#{pointsBean.toggle}"
+                                       name="-0.5">
+                            <span class="button-input">-0.5</span>
+                        </p:commandLink>
+
+                        <p:commandLink type="button" id="x5" actionListener="#{pointsBean.toggle}"
+                                       name="0">
+                            <span class="button-input">0</span>
+                        </p:commandLink>
+
+                        <p:commandLink type="button" id="x6" actionListener="#{pointsBean.toggle}"
+                                       name="0.5">
+                            <span class="button-input">0.5</span>
+                        </p:commandLink>
+
+                        <p:commandLink type="button" id="x7" actionListener="#{pointsBean.toggle}"
+                                       name="1">
+                            <span class="button-input">1</span>
+                        </p:commandLink>
+
+                        <p:commandLink type="button" id="x8" actionListener="#{pointsBean.toggle}"
+                                       name="1.5">
+                            <span class="button-input">1.5</span>
+                        </p:commandLink>
+                    </div>
+                    <div id="y-error"></div>
+                    <div id="input-y">
+                        <p:panelGrid styleClass="ui-noborder" columns="2">
+                            <h:outputLabel for="coord-y" value="Выберите y:" id="y-label"/>
+                            <p:inputText name="y" id="coord-y"
+                                         placeholder="(-5...5)" value="#{pointsBean.strY}">
+                            </p:inputText>
+                        </p:panelGrid>
+                    </div>
+                    <div id="input-r">
+                        <p:panelGrid styleClass="ui-noborder" columns="3">
+                            <h:outputLabel for="coord-r" value="Выберите r:"/>
+                            <p:selectOneMenu name="r" id="coord-r" value="#{pointsBean.strR}" style="width: 60px">
+                                <f:selectItem itemValue="1" itemLabel="1"/>
+                                <f:selectItem itemValue="2" itemLabel="2"/>
+                                <f:selectItem itemValue="3" itemLabel="3"/>
+                                <f:selectItem itemValue="4" itemLabel="4"/>
+                                <f:validateDoubleRange maximum="4" minimum="1"/>
+                                <f:ajax execute="@parent" render="area"/>
+                            </p:selectOneMenu>
+                        </p:panelGrid>
+                    </div>
+                    <ul>
+                        <li>
+                            <div id="submitParent">
+                                <p:commandButton id="submitButton" action="#{pointsBean.submitButton()}" type="submit"
+                                                 value="Проверить" update="result-table area">
+                                </p:commandButton>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="clearParent">
+                                <p:commandButton id="clearButton" type="submit" value="Очистить результаты"
+                                                 action="#{pointsBean.clearButton()}" update="result-table area"
+                                                 ajax="false">
+                                </p:commandButton>
+                            </div>
+                        </li>
+                    </ul>
+                </h:form>
+            </td>
+            <td id="table-cell">
+                <div id="table-results">
+                    <p:dataTable id="result-table" value="#{pointsBean.results}" var="result"
+                                 emptyMessage="Данные куда-то пропали(">
+                        <p:column>
+                            <f:facet name="header">№</f:facet>
+                            ${result.number}
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">X</f:facet>
+                            ${result.x}
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">Y</f:facet>
+                            ${result.y}
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">R</f:facet>
+                            ${result.r}
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">Результат</f:facet>
+                            ${result.hitValue ? "Попадание"  : "Непопадание"}
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">Время обработки</f:facet>
+                            ${result.time}
+                        </p:column>
+                    </p:dataTable>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div id="hello-page">
+        <h:form>
+            <h:commandLink type="button" action="helloPage" value="На главную"/>
+        </h:form>
+    </div>
+    <h:outputScript library="js" name="app.js"/>
+</h:body>
+
+</html>

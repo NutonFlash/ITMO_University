@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ru" style="background-color: #c0bd92">
+<head>
+    <meta charset="UTF-8">
+    <meta content="First web programming lab" name="description">
+    <meta content="Alexey Kislitsin" name="author">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Web lab №1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
+    <style>
+        html {
+            font-family: 'Montserrat', sans-serif;
+            color: #FFFFFF;
+            font-size: 16px;
+            background-color: #c0bd92;
+        }
+        header {
+            width: 85.3%;
+            background-color: #c0bd92;
+            font-size: 26px;
+            padding: 20px 0 20px 40px;
+            margin-left: 5.87%;
+            margin-bottom: 10px;
+            font-family: monospace;
+        }
+
+        body {
+            font-size: initial;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        .header-text-left {
+            text-align: left;
+            width: 48%;
+            display: inline-block;
+        }
+
+        .header-text-right {
+            text-align: right;
+            width: 48%;
+            display: inline-block;
+        }
+
+        #main-grid {
+            width: 100%;
+            margin-left: 5.8%;
+        }
+
+        .plate-top {
+            text-align: center;
+            background-color: #66cdaa;
+            border: 1px solid #0f69ff;
+        }
+
+        #graph-content-header {
+            width: 30%;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+        }
+        #values-plate {
+            width: 100%;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 0;
+            border-left: 0;
+        }
+
+        #table-content-header {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 8.3%;
+        }
+
+        .plate-top-title {
+            font-weight: 600;
+            font-size: 30px;
+            text-align: inherit;
+        }
+
+        .image-container {
+            margin-top: 3px;
+        }
+
+        .scroll-container {
+            width: 100%;
+        }
+
+        .table-header th {
+            font-size: 23px;
+            font-weight: 500;
+            padding: 8px 0 8px;
+            text-align: center;
+            background-color: #7144c4;
+        }
+
+        .table-body td {
+            font-size: 20px;
+            font-weight: 500;
+            padding: 8px 0 8px;
+            text-align: center;
+            background-color: #7144c4;
+        }
+        .hitres-col {
+            width: 7%;
+        }
+
+        .time-col {
+            width: 7%;
+        }
+
+        .coords-col {
+            width: 3%;
+        }
+
+        #input-grid {
+            width: 100%;
+        }
+
+        #input-form {
+            background-color: #7144c4;
+            width: 100%;
+        }
+
+        .input-grid-label {
+            width: 25%;
+            font-weight: 700;
+            font-size: 26px;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 30px 20px 30px;
+            border-right: 2px solid #FFFFFF;
+            border-bottom: 2px solid #FFFFFF;
+        }
+
+        .input-grid-value {
+            width: 100%;
+            text-align: center;
+            border-bottom: 2px solid #FFFFFF;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .center-labeled label {
+            position: absolute;
+            top: 22px;
+            right: 6px;
+            color: #FFFFFF;
+        }
+
+        #y-textinput {
+            text-align: center;
+            padding: 4% 0 4%;
+            font-size: 18px;
+            color: #3e3e3e;
+            border: 1px solid #aaa;
+            box-shadow: 0 0.5px 0 0.5px #4c4c4c;
+            border-radius: .5em;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .input-grid-value.x-radio-group {
+            text-align: center;
+            padding-right: 20px;
+        }
+
+        .center-labeled-r {
+            display: inline-block;
+            position: relative;
+            color: #FFFFFF;
+            font-size: 17px;
+            margin-left: 4%;
+        }
+
+        .rbox-label {
+            position: relative;
+            margin: 4% 5% 4% 5%;
+        }
+
+        .r-button {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            width: 35px;
+            height: 25px;
+            border: 1px solid #aaa;
+            box-shadow: 0 0.5px 0 0.5px #4c4c4c;
+            border-radius: .8em;
+            color: #000000;
+            background-color: #FFFFFF;
+        }
+
+        .r-button:hover,.r-clickedButton {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            width: 35px;
+            height: 25px;
+            border: 1px solid #aaa;
+            box-shadow: 0 0.5px 0 0.5px #4c4c4c;
+            border-radius: .8em;
+            color: #FFFFFF;
+            background-color: #4c4c4c;
+        }
+
+        .buttons-row {
+            background-color: #FFFFFF;
+            text-align: right;
+        }
+
+        .button {
+            color: #000000;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            height: 27px;
+            width: 90px;
+            display: inline-block;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 10px;
+            border: 1px solid #aaa;
+            box-shadow: 0 0.5px 0 0.5px #4c4c4c;
+            border-radius: .5em;
+        }
+
+        .button:hover {
+            color: #FFFFFF;
+            background-color: #4c4c4c;
+        }
+
+        select {
+            width: 105px;
+            height: 30px;
+            margin-top: 4%;
+            border: 1px solid #aaa;
+            box-shadow: 0 0.3px 0 0.3px #4c4c4c;
+            border-radius: .8em;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+        }
+
+        option {
+            color: #3e3e3e;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+        }
+
+        #select-description {
+            margin: 0 0 0 0;
+            padding-bottom: 10px;
+        }
+
+        #true {
+            width: 7%;
+            font-size: 24px;
+            color: #00E800;
+            font-weigth: bolder;
+        }
+
+        #false {
+            width: 7%;
+            font-size: 24px;
+            color: #ff0000;
+            font-weigth: bolder;
+        }
+
+        #values-table {
+            border-spacing: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <p class="header-text-left">Алексей Кислицин (P3231)</p>
+    <p class="header-text-right">Вариант №31011</p>
+</header>
+<main>
+    <table id="main-grid">
+        <tr>
+            <!--Graph-->
+            <td class="content-header" id="graph-content-header">
+                <div class="plate-top">
+                    <h2 class="plate-top-title">Graph</h2>
+                </div>
+                <div class="image-container">
+                    <img alt="Область допустимых значений координат" height="100%" src="graph/graph.png" width="100.05%">
+                </div>
+                <table id="values-table">
+                    <tr>
+                        <!--Values-->
+                        <td class="content-plate" id="values-plate">
+                            <div class="plate-top">
+                                <h2 class="plate-top-title"> Values </h2>
+                            </div>
+                            <form action="" id="input-form" method="post" onreset="resetForm()"
+                                  onsubmit="return submitForm()">
+                                <table id="input-grid">
+                                    <!--X Value-->
+                                    <tr class="value-container">
+                                        <td class="input-grid-label">
+                                            <label id="x">X: </label>
+                                        </td>
+                                        <td class="input-grid-value">
+                                            <div id="x_err"></div>
+                                            <p id="select-description">Choose one of the coordinates from the list:</p>
+                                            <select>
+                                                <option value="Select">Select</option>
+                                                <option value="3">3</option>
+                                                <option value="2">2</option>
+                                                <option value="1">1</option>
+                                                <option value="0">0</option>
+                                                <option value="-1">-1</option>
+                                                <option value="-2">-2</option>
+                                                <option value="-3">-3</option>
+                                                <option value="-4">-4</option>
+                                                <option value="-5">-5</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <!--Y VALUES-->
+
+                                    <tr class="value-container">
+                                        <td class="input-grid-label">
+                                            <label for="y-textinput" id="y">Y: </label>
+                                        </td>
+                                        <td class="input-grid-value">
+                                            <div id="y_err"></div>
+                                            <input autocomplete="off" id="y-textinput" maxlength="9" name="yvalue"
+                                                   placeholder="Number from -5 to 5"
+                                                   type="text">
+                                        </td>
+                                    </tr>
+                                    <!--R Values-->
+                                    <tr class="value-container">
+                                        <td class="input-grid-label">
+                                            <label id="r">R: </label>
+                                        </td>
+
+                                        <td class="input-grid-value x-radio-group">
+                                            <div id="r_err"></div>
+                                            <div class="center-labeled-r">
+                                                <label class="rbox-label" for="r-button1"><button class="r-button" type="button" id="r-button1">1</button></label>
+                                            </div>
+
+
+                                            <div class="center-labeled-r">
+                                                <label class="rbox-label" for="r-button2"><button class="r-button" type="button" id="r-button2">1.5</button></label>
+                                            </div>
+
+
+                                            <div class="center-labeled-r">
+                                                <label class="rbox-label" for="r-button3"><button class="r-button" type="button" id="r-button3">2</button></label>
+                                            </div>
+
+
+                                            <div class="center-labeled-r">
+                                                <label class="rbox-label" for="r-button4"><button class="r-button" type="button" id="r-button4">2.5</button></label>
+                                            </div>
+
+
+                                            <div class="center-labeled-r">
+                                                <label class="rbox-label" for="r-button5"><button class="r-button"  type="button" id="r-button5">3</button></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!--Buttons-->
+                                    <tr>
+                                        <td class="buttons-row" colspan="2">
+                                            <div class="buttons">
+                                                <input class="button" name="Submit" type="submit" value="Submit">
+                                                <input class="button" name="Reset" type="reset" value="Reset">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <!--Table-->
+            <td class="content-header" id="table-content-header" rowspan="2">
+                <div class="plate-top">
+                    <h2 class="plate-top-title"> Table </h2>
+                </div>
+
+                <div class="scroll-container">
+                    <table id="result-table">
+                        <tbody class="table-body">
+                        <tr class="table-header">
+                            <th class="coords-col"> X</th>
+                            <th class="coords-col">Y</th>
+                            <th class="coords-col">R</th>
+                            <th class="time-col">Current Time</th>
+                            <th class="time-col"> Execution time</th>
+                            <th class="hitres-col"> Hit result</th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <tr>
+
+        </tr>
+    </table>
+</main>
+<script src="js/main.js"></script>
+</body>
+</html>

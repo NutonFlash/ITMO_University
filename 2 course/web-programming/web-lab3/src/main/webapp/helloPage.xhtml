@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Web lab №3</title>
+    <h:outputStylesheet library="css" name="helloPage.css"/>
+    <h:outputScript library="js" name="clock.js"/>
+    <h:link rel="icon" href="images/favicon.ico"/>
+    <h:link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet"/>
+</h:head>
+
+<h:body>
+    <table>
+        <tr>
+            <td id="name">Алексей Кислицин (P3231)</td>
+            <td id="variant">Вариант №10206</td>
+        </tr>
+    </table>
+    <p id="main-content">Доброе утро, Александр Исаев! Надеюсь, что у вас сегодня хорошее настроение и у меня получится сдать лабу и не отлететь на комиссию)</p>
+    <table id="pray-table">
+        <tr>
+            <td id="pray-text">god bless</td>
+            <td id="pray-smile">&#128591;</td>
+        </tr>
+    </table>
+    <div id="clock"></div>
+    <div id="app-page">
+        <h:form>
+            <h:commandLink type="button" action="app" value="Приложение"/>
+        </h:form>
+    </div>
+</h:body>
+</html>

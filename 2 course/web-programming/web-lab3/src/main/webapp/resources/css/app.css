@@ -1,0 +1,156 @@
+body .ui-widget, body p {
+    color: #495057;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+body .ui-panelgrid .ui-panelgrid-cell {
+    border: 0;
+}
+
+#area-container {
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+
+#area-zone{
+    width: 300px;
+    height: 300px;
+}
+
+#area {
+    width: 300px;
+    height: 300px;
+}
+
+svg {
+    width: 302px;
+    height: 302px;;
+    border: 2px solid deepskyblue;
+}
+
+/*СТИЛЬ ВВОДА X, Y, R*/
+#input-x {
+    padding-left: 20px;
+}
+
+#input-x a:hover {
+    text-decoration: none;
+    color: white;
+}
+#input-x a:active{
+    text-decoration: none;
+}
+
+.button-input {
+    text-align: center;
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: lightyellow;
+    margin: 1px;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.button-input:hover {
+    transition: 0.5s;
+    background-color: #2196F3;
+    margin: 1px;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.button-input-selected {
+    text-align: center;
+    vertical-align: center;
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: #2196F3;
+    margin: 1px;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#input-y {
+    padding-left: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#y-label {
+    width: 50px;
+    position: relative;
+}
+
+#input-r {
+    padding-left: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#submitParent button span, #clearParent button span {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#submitParent {
+    padding-left: 15px;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#table-results {
+    padding-left: 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: white;
+    border-collapse: collapse;
+}
+
+#table-cell {
+    display: block;
+}
+
+#form ul li {
+    display: inline-block;
+    margin-left: 4px;
+    list-style-type: none;
+}
+
+#form ul {
+    padding-left: 5px;
+}
+
+.text-center {
+    margin: auto 30px;
+    display: inline-block;
+}
+
+.text-center-button {
+    display: inline-block;
+}
+
+#hello-page{
+    padding: 15px 25px;
+    display: inline-block;
+    margin-left: 45%;
+    margin-bottom: 40px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: #2196F3;
+    font-size: 20px;
+}
+
+div form a {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-decoration: none;
+}
