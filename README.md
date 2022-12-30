@@ -13,3 +13,7 @@
    - [Numerical integration. Rectangle methods.](2%20course/сomputational%20mathematics/Labs/Lab3)
    - [The method of interpolation by the Newton polynomial.](2%20course/сomputational%20mathematics/Labs/Lab4)
    - [Numerical differentiation and the Cauchy problem. The Runge-Kutta method of the 4th order.](2%20course/сomputational%20mathematics/Labs/Lab5)
+4. Math logic:
+   - [Parser of boolean expressions](2%20course/basic%20math%20logic/TaskA)
+   - [Counter of true|false results that can be completed from a boolean expression](2%20course/basic%20math%20logic/TaskB)
+   - [Derivation of the proof of a boolean expression](2%20course/basic%20math%20logic/TaskC)
