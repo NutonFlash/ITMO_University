@@ -1,5 +1,5 @@
 ## ITMO_University
-### There are some educational materials that also include my homework for coding related subjects
+### There are some educational materials that also include my homeworks for coding related subjects
 #### If you are looking for my code examples you may follow the links below:
 1. Java OOP:
    - [Console Interface (part 1 implements functionality for interaction with collection of "Movies")](1%20course/Programming/Lab5)
